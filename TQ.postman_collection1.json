@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "0550973e-e0c5-4714-ae5d-fb95e515acf8",
+		"name": "TQ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "unbesiagbar1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Maksim Kotsiuba",
+							"type": "text"
+						},
+						{
+							"key": "tasks[0]",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "companies[0]\n",
+							"value": "39",
+							"type": "text"
+						},
+						{
+							"key": "companies[1]",
+							"value": "40",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createuser",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "company_name\n",
+							"value": "Unbesiagbar\n",
+							"description": "1\n",
+							"type": "text"
+						},
+						{
+							"key": "company_type\n",
+							"value": "ООО",
+							"description": "2\n",
+							"type": "text"
+						},
+						{
+							"key": "company_users[0]",
+							"value": "unbesiagbar1@gmail.com",
+							"description": "3\n\n",
+							"type": "text"
+						},
+						{
+							"key": "email_owner",
+							"value": "unbesiagbar@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createcompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUserWithTasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"email\": \"unbesiagbar2@gmail.com\",\r\n \"name\": \"Maks Kotsiuba\",\r\n \"tasks\": [{\r\n   \"title\": \"Первая задача\",\r\n   \"description\": \"Первая задача 11\"\r\n  },\r\n  {\r\n   \"title\": \"Вторая задача\",\r\n   \"description\": \"Вторая задача 11\"\r\n  }\r\n ]\r\n}"
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createuserwithtasks",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createuserwithtasks"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
